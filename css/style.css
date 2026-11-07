@@ -2,7 +2,10 @@
   --ink: #1B1B2F;
   --cream: #FFF8E7;
   --yellow: #FFD23F;
+  --green: #8DEBD8;
   --pink: #FF6B9D;
+  --white: #E5E5E5;
+
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -34,7 +37,7 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   min-height: 6rem;
 }
 
-/* ロゴとContactに共通する、丸いボタン */
+/* 丸いボタン */
 .pill {
   display: inline-flex;
   align-items: center;
@@ -87,6 +90,74 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   background: var(--pink);
   font-weight: 700;
 }
+
+/* Contactだけ（.pill より後に書く） */
+.pill--watch {
+  background: var(--white);
+  font-weight: 700;
+}
+
+.top {
+    margin: 4em 3em;
+}
+
+.top--left {
+    margin: 1em 3em;
+    flex-direction: column;
+}
+
+.top--right {
+    margin: 1em 3em;
+    padding: 5em 5em;
+}
+
+.box {
+  font-family: "Dela Gothic One", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 var(--ink);
+  font-size: 3rem;
+}
+
+.box--web {
+  background: var(--yellow);
+  font-weight: 700;
+  transform: rotate(-5deg);
+}
+
+.box--data {
+  background: var(--green);
+  font-weight: 700;
+  transform: rotate(5deg);
+}
+
+.box--movie {
+  background: var(--pink);
+  font-weight: 700;
+  transform: rotate(-5deg);
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+
+
+
+
 
 /* 狭い画面では、中央に寄せる */
 @media (max-width: 640px) {
