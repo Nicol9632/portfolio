@@ -7,14 +7,10 @@
         <meta name="description" content="Web・データ・動画の作品をまとめたポートフォリオ">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Rubik:ital,wght@0,300..900;1,300..900&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <!-- <head> に入れる -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
-
     </head>
+
     <body>
         <header class="site-header">
             <div class="wrapper header-inner">
@@ -33,32 +29,60 @@
         </header>
 
         <main>
-            <div class="top">
-                <div class="top--left">
-                    <p class="box box--web">つくって、</p>
-                    <p class="box box--data">しらべて、</p>
-                    <p class="box box--movie">みせる。</p>
+            <section class="wrapper hero">
+                <div class="hero-text">
+                    <h1 class="catch">
+                        <span class="box box--web">つくって、</span>
+                        <span class="box box--data">しらべて、</span>
+                        <span class="box box--movie">みせる。</span>
+                    </h1>
                     <p>コーディングの練習で作ったWebサイト、データ分析の練習、動画編集やモーショングラフィックをまとめています。</p>
-                    <ul class="button">
+                    <ul class="hero-buttons">
                         <li><a class="pill pill--watch" href="#web">作品を見る</a></li>
-                        <li>
-                            <a class="pill pill--contact" href="#contact">お問い合わせ</a>
-                        </li>
+                        <li><a class="pill pill--contact" href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
-                <div class="top--right">
 
+                <div class="hero-visual">
+                    <!-- ① ブラウザの窓 -->
+                    <div class="window">
+                        <div class="window-bar">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="window-body">
+                            <div class="line line--accent"></div>
+                            <div class="line"></div>
+                            <div class="line line--short"></div>
+                            <div class="blocks">
+                                <span class="block block--mint"></span>
+                                <span class="block block--lavender"></span>
+                                <span class="block block--yellow"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ② と ③ のタイルを横に並べる -->
+                    <div class="tiles">
+                        <div class="tile tile--chart">
+                            <span class="bar" style="height: 30%"></span>
+                            <span class="bar" style="height: 50%"></span>
+                            <span class="bar" style="height: 40%"></span>
+                            <span class="bar bar--accent" style="height: 70%"></span>
+                        </div>
+                        <div class="tile tile--video">
+                            <span class="play">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <section id="web">
-                <!-- Web制作 -->
             </section>
-            <section id="data">
-                <!-- データ分析 -->
-            </section>
-            <section id="movie">
-                <!-- 動画 -->
-            </section>
+
+            <section id="web"><!-- Web制作 --></section>
+            <section id="data"><!-- データ分析 --></section>
+            <section id="movie"><!-- 動画 --></section>
         </main>
 
         <footer>

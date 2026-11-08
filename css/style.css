@@ -5,7 +5,7 @@
   --green: #8DEBD8;
   --pink: #FF6B9D;
   --white: #E5E5E5;
-
+  --lavender: #C9B6FF;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -97,62 +97,163 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   font-weight: 700;
 }
 
-.top {
-    margin: 4em 3em;
+/* トップの大きな部分 */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  padding-block: 4rem 6rem;
 }
 
-.top--left {
-    margin: 1em 3em;
-    flex-direction: column;
+.hero-text {
+  flex: 1 1 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
 
-.top--right {
-    margin: 1em 3em;
-    padding: 5em 5em;
+.hero-text p { margin: 0; max-width: 32rem; }
+
+.hero-visual { flex: 1 1 24rem; }
+
+/* キャッチコピー */
+.catch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
 .box {
-  font-family: "Dela Gothic One", sans-serif;
-  display: inline-flex;
-  align-items: center;
-  min-height: 3rem;
-  padding: 0 1.5rem;
+  padding: 0.25rem 1rem;
   background: var(--yellow);
   border: 3px solid var(--ink);
-  border-radius: 15px;
+  border-radius: 1rem;
   box-shadow: 4px 4px 0 var(--ink);
-  font-size: 3rem;
+}
+.box--web   { transform: rotate(-2deg); }
+.box--data  { background: var(--green); transform: rotate(2deg); }
+.box--movie { background: var(--pink);  transform: rotate(-2deg); }
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.box--web {
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* ① 窓 */
+.window {
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 8px 8px 0 var(--ink);
+  overflow: hidden;
+  transform: rotate(1.5deg);
+}
+.window-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0 1rem;
   background: var(--yellow);
-  font-weight: 700;
-  transform: rotate(-5deg);
+  border-bottom: 3px solid var(--ink);
+}
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: var(--ink);
+}
+.window-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 10rem;
+  padding: 1.5rem;
+}
+.line {
+  width: 80%;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: #E7E0CF;
+}
+.line--accent { width: 45%; height: 1rem; background: var(--pink); }
+.line--short  { width: 60%; }
+.blocks { display: flex; gap: 0.75rem; margin-top: auto; }
+.block {
+  flex: 1;
+  height: 3rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.75rem;
+}
+.block--mint     { background: var(--green); }
+.block--lavender { background: var(--lavender); }
+.block--yellow   { background: var(--yellow); }
+
+/* ② ③ タイル */
+.tiles { display: flex; gap: 1.25rem; }
+.tile {
+  flex: 1;
+  height: 10rem;
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 var(--ink);
 }
 
-.box--data {
+/* ② 棒グラフ */
+.tile--chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding: 1.25rem;
   background: var(--green);
-  font-weight: 700;
-  transform: rotate(5deg);
+  transform: rotate(-2deg);
 }
-
-.box--movie {
-  background: var(--pink);
-  font-weight: 700;
-  transform: rotate(-5deg);
+.bar {
+  flex: 1;
+  background: var(--ink);
+  border-radius: 0.5rem 0.5rem 0 0;
 }
+.bar--accent { background: var(--pink); border: 2px solid var(--ink); }
 
-.button {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+/* ③ 再生ボタン */
+.tile--video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  box-shadow: 6px 6px 0 var(--lavender);
+  transform: rotate(2deg);
 }
-
-
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+.play svg { width: 1.5rem; height: 1.5rem; fill: var(--ink); }
 
 
 
