@@ -423,6 +423,8 @@ a:focus-visible {
 .data-detail dt { font-weight: 700; }
 .data-detail dd { margin: 0; }
 
+.section--movie { background: var(--lavender); }
+.circle--movie { color: var(--lavender); }
 
 /* 狭い画面では、中央に寄せる */
 @media (max-width: 640px) {
