@@ -8,7 +8,9 @@
   --lavender: #C9B6FF;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
 
 body {
   margin: 0;
@@ -18,8 +20,13 @@ body {
   background-color: var(--cream);
 }
 
-a { color: inherit; text-decoration: none; }
-a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+a { 
+  color: inherit; text-decoration: none;
+}
+
+a:focus-visible { 
+  outline: 3px solid var(--ink); outline-offset: 3px; 
+}
 
 .wrapper {
   max-width: 1100px;
@@ -85,13 +92,11 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   text-underline-offset: 4px;
 }
 
-/* Contactだけ（.pill より後に書く） */
 .pill--contact {
   background: var(--pink);
   font-weight: 700;
 }
 
-/* Contactだけ（.pill より後に書く） */
 .pill--watch {
   background: var(--white);
   font-weight: 700;
@@ -114,9 +119,13 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   gap: 1.5rem;
 }
 
-.hero-text p { margin: 0; max-width: 32rem; }
+.hero-text p { 
+  margin: 0; max-width: 32rem; 
+}
 
-.hero-visual { flex: 1 1 24rem; }
+.hero-visual { 
+  flex: 1 1 24rem; 
+}
 
 /* キャッチコピー */
 .catch {
@@ -254,7 +263,6 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   background: var(--yellow);
 }
 .play svg { width: 1.5rem; height: 1.5rem; fill: var(--ink); }
-
 .divider {
   height: 2rem;
   margin: 0;
@@ -262,60 +270,111 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   background: var(--ink);
 }
 
-.card {
+/* ===== セクション共通 ===== */
+.section {
+  padding-block: 5rem;
+}
+.section--web { background: var(--yellow); }
+
+.section-head { margin-bottom: 3rem; }
+.section-head p { margin: 1rem 0 0; }
+
+.section-title {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem 1.5rem;
-  min-height: 6rem;
-}
-
-.card--web {
-  display: inline-flex;
-  align-items: center;
-  min-height: 3rem;
-  padding: 0 1rem;
-  font-weight: 700;
-}
-
-#web {
-  background-color: var(--yellow);
-}
-
-.top {
-  margin-top: 0;
-}
-
-.circle-number {
+  gap: 1rem;
+  margin: 0;
   font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* 丸い番号 */
+.circle-number {
   display: inline-grid;
   place-items: center;
   inline-size: 4rem;
   aspect-ratio: 1;
   border-radius: 50%;
   background: var(--ink);
+  font-size: 1.5rem;
 }
+.circle--web { color: var(--yellow); }
 
-.circle--web {
-  color: var(--yellow);
-}
-
-.pill--title {
-  background: var(--yellow);
-}
-
+/* ===== カードの並び ===== */
 .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   margin: 0;
   padding: 0;
-  list-style: none;   /* 先頭の「・」を消す */
+  list-style: none;
+}
+.cards > li {
+  display: flex;               /* 中のカードを、高さいっぱいに伸ばす */
+  flex: 1 1 18rem;
 }
 
-.cards > li { flex: 1 1 18rem; }
-.card { height: 100%; }  /* カードの高さを、横並びでそろえる */
+/* ===== カード1枚 ===== */
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 var(--ink);
+  overflow: hidden;
+}
+
+/* 画像の枠（画像が無い時は、しま模様と文字が出る） */
+.thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 8 / 5;
+  border-bottom: 3px solid var(--ink);
+  background: repeating-linear-gradient(45deg, var(--white) 0 1rem, #fff 1rem 2rem);
+  font-weight: 700;
+}
+.thumb::before { content: "スクリーンショット"; }
+
+.thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* カードの本文 */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+.card-body p { margin: 0; }
+
+.badge {
+  align-self: flex-start;
+  padding: 0 0.75rem;
+  background: var(--yellow);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.card h3 a:hover { text-decoration: underline; }
 
 .tags {
   display: flex;
@@ -325,10 +384,27 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   padding: 0;
   list-style: none;
 }
+.tags li {
+  padding: 0 0.75rem;
+  background: var(--green);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
 
-
-
-
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: auto;
+  font-weight: 700;
+}
+.card-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.card-links a:hover { text-decoration-thickness: 3px; }
 
 /* 狭い画面では、中央に寄せる */
 @media (max-width: 640px) {
