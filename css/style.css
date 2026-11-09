@@ -255,9 +255,12 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 }
 .play svg { width: 1.5rem; height: 1.5rem; fill: var(--ink); }
 
-
-
-
+.divider {
+  height: 2rem;
+  margin: 0;
+  border: 0;
+  background: var(--ink);
+}
 
 
 /* 狭い画面では、中央に寄せる */
