@@ -4,7 +4,8 @@
   --yellow: #FFD23F;
   --green: #8DEBD8;
   --pink: #FF6B9D;
-  --white: #E5E5E5;
+  --white: #FFFFFF;
+  --cream: #E5E5E5;
   --lavender: #C9B6FF;
 }
 
@@ -98,7 +99,7 @@ a:focus-visible {
 }
 
 .pill--watch {
-  background: var(--white);
+  background: var(--cream);
   font-weight: 700;
 }
 
@@ -335,7 +336,7 @@ a:focus-visible {
   place-items: center;
   aspect-ratio: 8 / 5;
   border-bottom: 3px solid var(--ink);
-  background: repeating-linear-gradient(45deg, var(--white) 0 1rem, #fff 1rem 2rem);
+  background: repeating-linear-gradient(45deg, var(--cream) 0 1rem, #fff 1rem 2rem);
   font-weight: 700;
 }
 .thumb::before { content: "スクリーンショット"; }
@@ -384,6 +385,7 @@ a:focus-visible {
   padding: 0;
   list-style: none;
 }
+
 .tags li {
   padding: 0 0.75rem;
   background: var(--green);
@@ -405,6 +407,30 @@ a:focus-visible {
   text-underline-offset: 4px;
 }
 .card-links a:hover { text-decoration-thickness: 3px; }
+
+.badge--data {
+  background: var(--green);
+}
+
+.tags--data li {
+  background: var(--lavender);
+}
+
+.section--data { background: var(--cream); }
+
+.data-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: auto;
+}
+
+.data-detail dl {
+  font-weight: 700;
+
+}
+
+
 
 /* 狭い画面では、中央に寄せる */
 @media (max-width: 640px) {
