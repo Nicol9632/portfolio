@@ -7,39 +7,44 @@
         <meta name="description" content="Web・データ・動画の作品をまとめたポートフォリオ">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
-        <header class="site-header">
+        <header class="site-header" id="top">
             <div class="wrapper header-inner">
                 <a href="index.html" class="pill logo">Omochi</a>
 
                 <nav aria-label="メインメニュー">
-                <ul class="nav">
-                    <li><a class="nav-link" href="#web">Web</a></li>
-                    <li><a class="nav-link" href="#data">Data</a></li>
-                    <li><a class="nav-link" href="#movie">Movie</a></li>
-                    <li><a class="nav-link" href="#about">About</a></li>
-                    <li><a class="pill pill--contact" href="#contact">Contact</a></li>
-                </ul>
+                    <ul class="nav">
+                        <li><a class="nav-link" href="#web">Web</a></li>
+                        <li><a class="nav-link" href="#data">Data</a></li>
+                        <li><a class="nav-link" href="#movie">Movie</a></li>
+                        <li><a class="nav-link" href="#about">About</a></li>
+                        <li><a class="pill pill--pink" href="#contact">Contact</a></li>
+                    </ul>
                 </nav>
             </div>
         </header>
 
         <main>
+            <!-- ===== ヒーロー ===== -->
             <section class="wrapper hero">
                 <div class="hero-text">
+                    <div class="eyebrow">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                        PORTFOLIO
+                    </div>
                     <h1 class="catch">
                         <span class="box box--web">つくって、</span>
                         <span class="box box--data">しらべて、</span>
                         <span class="box box--movie">みせる。</span>
                     </h1>
-                    <p>コーディングの練習で作ったWebサイト、データ分析の練習、動画編集やモーショングラフィックをまとめています。</p>
+                    <p class="lead">コーディングの練習で作ったWebサイト、データ分析、そして自分で編集・制作した動画をまとめています。</p>
                     <ul class="hero-buttons">
-                        <li><a class="pill pill--watch" href="#web">作品を見る</a></li>
-                        <li><a class="pill pill--contact" href="#contact">お問い合わせ</a></li>
+                        <li><a class="pill pill--pink pill--lg" href="#web">作品を見る</a></li>
+                        <li><a class="pill pill--white pill--lg" href="#contact">お問い合わせ</a></li>
                     </ul>
                 </div>
 
@@ -66,10 +71,10 @@
                     <!-- ② と ③ のタイルを横に並べる -->
                     <div class="tiles">
                         <div class="tile tile--chart">
-                            <span class="bar" style="height: 30%"></span>
-                            <span class="bar" style="height: 50%"></span>
                             <span class="bar" style="height: 40%"></span>
-                            <span class="bar bar--accent" style="height: 70%"></span>
+                            <span class="bar" style="height: 70%"></span>
+                            <span class="bar" style="height: 55%"></span>
+                            <span class="bar bar--accent" style="height: 100%"></span>
                         </div>
                         <div class="tile tile--video">
                             <span class="play">
@@ -82,6 +87,7 @@
 
             <hr class="divider">
 
+            <!-- ===== Web制作 ===== -->
             <section id="web" class="section section--web">
                 <div class="wrapper">
                     <div class="section-head">
@@ -94,19 +100,19 @@
                     <ul class="cards">
                         <li>
                             <article class="card">
-                                <div class="thumb">
-                                    <!-- <img src="images/work01.webp" alt="作品1のトップページの画面" width="800" height="500"> -->
+                                <div class="thumb thumb--web">
+                                    <img src="images/work01.webp" alt="作品1のトップページの画面" width="800" height="500">
                                 </div>
                                 <div class="card-body">
                                     <p class="badge">WEB 01</p>
-                                    <h3><a href="detail-web.html">portfolioサイト</a></h3>
-                                    <p>成果物をまとめるためのポートフォリオサイト作成</p>
+                                    <h3><a href="detail-web.html">サイト名 1</a></h3>
+                                    <p class="card-desc">何を作ったか、何を練習したか。</p>
                                     <ul class="tags">
                                         <li>HTML/CSS</li>
                                         <li>JavaScript</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="#">サイトを見る</a>
+                                        <a href="#">サイトを見る →</a>
                                         <a href="#">コードを見る</a>
                                     </div>
                                 </div>
@@ -114,18 +120,18 @@
                         </li>
                         <li>
                             <article class="card">
-                                <div class="thumb">
-                                    <!-- <img src="images/work02.webp" alt="作品2のトップページの画面" width="800" height="500" loading="lazy"> -->
+                                <div class="thumb thumb--web">
+                                    <img src="images/work02.webp" alt="作品2のトップページの画面" width="800" height="500" loading="lazy">
                                 </div>
                                 <div class="card-body">
                                     <p class="badge">WEB 02</p>
                                     <h3><a href="detail-web.html">サイト名 2</a></h3>
-                                    <p>何を作ったか、何を練習したか。</p>
+                                    <p class="card-desc">何を作ったか、何を練習したか。</p>
                                     <ul class="tags">
                                         <li>HTML/CSS</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="#">サイトを見る</a>
+                                        <a href="#">サイトを見る →</a>
                                         <a href="#">コードを見る</a>
                                     </div>
                                 </div>
@@ -133,19 +139,19 @@
                         </li>
                         <li>
                             <article class="card">
-                                <div class="thumb">
-                                    <!-- <img src="images/work03.webp" alt="作品3のトップページの画面" width="800" height="500" loading="lazy"> -->
+                                <div class="thumb thumb--web">
+                                    <img src="images/work03.webp" alt="作品3のトップページの画面" width="800" height="500" loading="lazy">
                                 </div>
                                 <div class="card-body">
                                     <p class="badge">WEB 03</p>
                                     <h3><a href="detail-web.html">サイト名 3</a></h3>
-                                    <p>何を作ったか、何を練習したか。</p>
+                                    <p class="card-desc">何を作ったか、何を練習したか。</p>
                                     <ul class="tags">
                                         <li>HTML/CSS</li>
                                         <li>TypeScript</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="#">サイトを見る</a>
+                                        <a href="#">サイトを見る →</a>
                                         <a href="#">コードを見る</a>
                                     </div>
                                 </div>
@@ -155,19 +161,29 @@
                 </div>
             </section>
 
+            <!-- ===== データ分析 ===== -->
             <section id="data" class="section section--data">
                 <div class="wrapper">
                     <div class="section-head">
                         <h2 class="section-title">
                             <span class="circle-number circle--data" aria-hidden="true">02</span>データ分析
                         </h2>
-                        <p>データをいじる練習でわかったことをまとめます</p>
+                        <p>データを集めて、整理して、わかったことをまとめた内容です。</p>
                     </div>
 
-                    <ul class="cards">
+                    <ul class="cards cards--data">
                         <li>
                             <article class="card">
-                                <div class="thumb thumb--data"></div>
+                                <div class="thumb thumb--data">
+                                    <div class="thumb-chart">
+                                        <span class="bar" style="height: 3.5rem"></span>
+                                        <span class="bar" style="height: 6rem"></span>
+                                        <span class="bar" style="height: 4.75rem"></span>
+                                        <span class="bar" style="height: 8rem"></span>
+                                        <span class="bar" style="height: 6.5rem"></span>
+                                        <span class="bar bar--highlight" style="height: 9.25rem"></span>
+                                    </div>
+                                </div>
                                 <div class="card-body">
                                     <p class="badge badge--data">DATA 01</p>
                                     <h3><a href="detail-data.html">分析のタイトル 1</a></h3>
@@ -184,7 +200,7 @@
                                         <li>SQL</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="#">レポートを見る</a>
+                                        <a href="#">レポートを見る →</a>
                                         <a href="#">コードを見る</a>
                                     </div>
                                 </div>
@@ -192,10 +208,19 @@
                         </li>
                         <li>
                             <article class="card">
-                                <div class="thumb thumb--data"></div>
+                                <div class="thumb thumb--data">
+                                    <div class="thumb-chart">
+                                        <span class="bar" style="height: 3.5rem"></span>
+                                        <span class="bar" style="height: 6rem"></span>
+                                        <span class="bar" style="height: 4.75rem"></span>
+                                        <span class="bar" style="height: 8rem"></span>
+                                        <span class="bar" style="height: 6.5rem"></span>
+                                        <span class="bar bar--highlight" style="height: 9.25rem"></span>
+                                    </div>
+                                </div>
                                 <div class="card-body">
-                                    <p class="badge badge--data">DATA 01</p>
-                                    <h3><a href="detail-data.html">分析のタイトル 1</a></h3>
+                                    <p class="badge badge--data">DATA 02</p>
+                                    <h3><a href="detail-data.html">分析のタイトル 2</a></h3>
                                     <dl class="data-detail">
                                         <dt>目的</dt>
                                         <dd>何を知りたかったか</dd>
@@ -206,10 +231,10 @@
                                     </dl>
                                     <ul class="tags tags--data">
                                         <li>Python</li>
-                                        <li>SQL</li>
+                                        <li>SQLite</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="#">レポートを見る</a>
+                                        <a href="#">レポートを見る →</a>
                                         <a href="#">コードを見る</a>
                                     </div>
                                 </div>
@@ -218,21 +243,152 @@
                     </ul>
                 </div>
             </section>
-            
+
+            <!-- ===== 動画 ===== -->
             <section id="movie" class="section section--movie">
-            <div class="wrapper">
-                <div class="section-head">
-                    <h2 class="section-title">
-                        <span class="circle-number circle--movie" aria-hidden="true">03</span>動画
-                    </h2>
-                    <p>自分で作った動画やモーショングラフィックをまとめてます</p>
+                <div class="wrapper">
+                    <div class="section-head">
+                        <h2 class="section-title">
+                            <span class="circle-number circle--movie" aria-hidden="true">03</span>動画
+                        </h2>
+                        <p>自分で編集した動画と、企画から作った動画です。</p>
+                    </div>
+
+                    <ul class="chips">
+                        <li><button type="button" class="chip chip--on">すべて</button></li>
+                        <li><button type="button" class="chip">編集</button></li>
+                        <li><button type="button" class="chip">制作</button></li>
+                    </ul>
+
+                    <ul class="videos">
+                        <li>
+                            <div class="video-thumb">
+                                <img src="images/movie01.webp" alt="動画1のサムネイル" width="1280" height="720">
+                                <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                                <span class="role">編集</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <div>
+                                <h3><a href="detail-movie.html">動画のタイトル 1</a></h3>
+                                <p>担当内容・使ったソフトなど</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video-thumb">
+                                <img src="images/movie02.webp" alt="動画2のサムネイル" width="1280" height="720" loading="lazy">
+                                <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                                <span class="role">制作</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <div>
+                                <h3><a href="detail-movie.html">動画のタイトル 2</a></h3>
+                                <p>担当内容・使ったソフトなど</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video-thumb">
+                                <img src="images/movie03.webp" alt="動画3のサムネイル" width="1280" height="720" loading="lazy">
+                                <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                                <span class="role">編集</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <div>
+                                <h3><a href="detail-movie.html">動画のタイトル 3</a></h3>
+                                <p>担当内容・使ったソフトなど</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video-thumb">
+                                <img src="images/movie04.webp" alt="動画4のサムネイル" width="1280" height="720" loading="lazy">
+                                <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                                <span class="role">制作</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <div>
+                                <h3><a href="detail-movie.html">動画のタイトル 4</a></h3>
+                                <p>担当内容・使ったソフトなど</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video-thumb">
+                                <img src="images/movie05.webp" alt="動画5のサムネイル" width="1280" height="720" loading="lazy">
+                                <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                                <span class="role">編集</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <div>
+                                <h3><a href="detail-movie.html">動画のタイトル 5</a></h3>
+                                <p>担当内容・使ったソフトなど</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="video-thumb">
+                                <img src="images/movie06.webp" alt="動画6のサムネイル" width="1280" height="720" loading="lazy">
+                                <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+                                <span class="role">制作</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                            <div>
+                                <h3><a href="detail-movie.html">動画のタイトル 6</a></h3>
+                                <p>担当内容・使ったソフトなど</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- 動画 -->
+            </section>
+
+            <!-- ===== About ===== -->
+            <section id="about" class="section">
+                <div class="wrapper about">
+                    <div class="about-photo">[プロフィール画像]</div>
+                    <div class="about-body">
+                        <p class="eyebrow eyebrow--yellow">ABOUT</p>
+                        <h2 class="about-name">Akane</h2>
+                        <p class="about-text">[自己紹介を2〜3行で。何を作るのが好きか、なぜ作り始めたかなど]</p>
+                        <ul class="skills">
+                            <li class="skill skill--yellow">
+                                <h3>コーディング</h3>
+                                <p>[使える言語・ツール]</p>
+                            </li>
+                            <li class="skill skill--green">
+                                <h3>データ分析</h3>
+                                <p>[使える言語・ツール]</p>
+                            </li>
+                            <li class="skill skill--lavender">
+                                <h3>動画編集</h3>
+                                <p>[使えるソフト]</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== Contact ===== -->
+            <section id="contact" class="contact">
+                <div class="wrapper">
+                    <div class="contact-box">
+                        <div class="contact-text">
+                            <p class="contact-label">CONTACT</p>
+                            <h2 class="contact-title">お仕事のご相談・ご連絡は<br>こちらからどうぞ。</h2>
+                        </div>
+                        <div class="contact-links">
+                            <a class="pill pill--lg" href="mailto:example@example.com">メールで連絡する</a>
+                            <ul class="sns">
+                                <li><a href="#">YouTube</a></li>
+                                <li><a href="#">GitHub</a></li>
+                                <li><a href="#">X</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <!-- コピーライト -->
+        <footer class="site-footer">
+            <div class="wrapper footer-inner">
+                <small>© Akane</small>
+                <a href="#top">ページの先頭へ ↑</a>
+            </div>
         </footer>
 
         <script src="js/main.js"></script>
