@@ -262,6 +262,73 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   background: var(--ink);
 }
 
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  min-height: 6rem;
+}
+
+.card--web {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0 1rem;
+  font-weight: 700;
+}
+
+#web {
+  background-color: var(--yellow);
+}
+
+.top {
+  margin-top: 0;
+}
+
+.circle-number {
+  font-family: "Dela Gothic One", sans-serif;
+  display: inline-grid;
+  place-items: center;
+  inline-size: 4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--ink);
+}
+
+.circle--web {
+  color: var(--yellow);
+}
+
+.pill--title {
+  background: var(--yellow);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;   /* 先頭の「・」を消す */
+}
+
+.cards > li { flex: 1 1 18rem; }
+.card { height: 100%; }  /* カードの高さを、横並びでそろえる */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+
 
 /* 狭い画面では、中央に寄せる */
 @media (max-width: 640px) {
