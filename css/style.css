@@ -408,28 +408,20 @@ a:focus-visible {
 }
 .card-links a:hover { text-decoration-thickness: 3px; }
 
-.badge--data {
-  background: var(--green);
-}
-
-.tags--data li {
-  background: var(--lavender);
-}
-
 .section--data { background: var(--cream); }
+.circle--data { color: var(--green); }
+.thumb--data::before { content: "グラフ"; }
+.badge--data { background: var(--green); }
+.tags--data li { background: var(--lavender); }
 
 .data-detail {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 0.5rem 1rem;
-  margin-top: auto;
+  margin: 0;
 }
-
-.data-detail dl {
-  font-weight: 700;
-
-}
-
+.data-detail dt { font-weight: 700; }
+.data-detail dd { margin: 0; }
 
 
 /* 狭い画面では、中央に寄せる */
