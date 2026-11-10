@@ -387,7 +387,6 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 }
 .thumb img {
   position: static;
-  inset: 0;
   z-index: 1;               /* 仮の表示より上に重ねる */
   width: 100%;
   height: 100%;
@@ -400,6 +399,9 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   height: 13rem;
   background: var(--pink-soft);
   overflow: hidden;
+}
+.thumb--web img {
+  object-position: top;     /* 画像の上端を、枠の上端にそろえる */
 }
 .thumb--web::before {
   content: "";
@@ -462,6 +464,7 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 
 .badge {
   align-self: flex-start;
+  width: fit-content;
   padding: 0 0.875rem;
   background: var(--yellow);
   color: var(--ink);
@@ -473,7 +476,7 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   letter-spacing: 0.1em;
 }
 .badge--data { background: var(--green); }
-.badge--movie { background: var(--green); width: fit-content;}
+.badge--movie { background: var(--green);}
 
 .card h3 {
   margin: 0;
@@ -597,9 +600,16 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   object-fit: cover;
 }
 .video-thumb .play { position: relative; z-index: 1; }
+.video-thumb iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .videos h3 { margin: 0; font-size: 1.125rem; font-weight: 900; }
-.videos p { margin: 0.25rem 0 0; font-size: 0.875rem; font-weight: 500; }
+.videos p:not(.badge) { margin: 0.25rem 0 0; font-size: 0.875rem; font-weight: 500; }
 
 /* ===== About ===== */
 .about {
@@ -628,7 +638,8 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-}.about-name {
+}
+.about-name {
   margin: 1rem 0 0;
   font-family: "Dela Gothic One", sans-serif;
   font-weight: 400;
