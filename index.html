@@ -130,7 +130,7 @@
                                     <img src="img/work03.webp" alt="作品2のトップページの画面" width="800" height="500" loading="lazy">
                                 </div>
                                 <div class="card-body">
-                                    <h3><a href="detail-web.html">準備中</a></h3>
+                                    <h3>準備中</h3>
                                 </div>
                             </article>
                         </li>
@@ -140,7 +140,7 @@
                                     <img src="img/work03.webp" alt="作品3のトップページの画面" width="800" height="500" loading="lazy">
                                 </div>
                                 <div class="card-body">
-                                    <h3><a href="detail-web.html">準備中</a></h3>
+                                    <h3>準備中</h3>
                                 </div>
                             </article>
                         </li>
@@ -161,40 +161,31 @@
                     <ul class="chips">
                         <li><button type="button" class="chip chip--on">すべて</button></li>
                         <li><button type="button" class="chip">Python</button></li>
-                        <li><button type="button" class="chip">Excel</button></li>
                     </ul>
 
                     <ul class="cards cards--data">
                         <li>
                             <article class="card">
                                 <div class="thumb thumb--data">
-                                    <div class="thumb-chart">
-                                        <span class="bar" style="height: 3.5rem"></span>
-                                        <span class="bar" style="height: 6rem"></span>
-                                        <span class="bar" style="height: 4.75rem"></span>
-                                        <span class="bar" style="height: 8rem"></span>
-                                        <span class="bar" style="height: 6.5rem"></span>
-                                        <span class="bar bar--highlight" style="height: 9.25rem"></span>
-                                    </div>
+                                    <img src="img/data01-chart.png" alt="世代ごとの平均合計種族値の折れ線グラフ">
                                 </div>
                                 <div class="card-body">
                                     <p class="badge badge--data">DATA 01</p>
-                                    <h3><a href="detail-data.html">分析のタイトル 1</a></h3>
+                                    <h3><a href="detail-data01.html">PokéAPIから世代ごとの種族値の合計の平均を比較する</a></h3>
                                     <dl class="data-detail">
                                         <dt>目的</dt>
-                                        <dd>何を知りたかったか</dd>
+                                        <dd>APIからデータを取得し、保存して、可視化するまでの流れを経験する</dd>
                                         <dt>手法</dt>
-                                        <dd>使ったツール・分析方法</dd>
+                                        <dd>PokéAPI の JSON を保存 → Python で整形 → SQLite に登録 → 世代ごとに平均を集計</dd>
                                         <dt>結果</dt>
-                                        <dd>わかったこと</dd>
+                                        <dd>最大値・最小値の変動は小さい一方、平均は世代が進むにつれて右肩上がりになった</dd>
                                     </dl>
                                     <ul class="tags tags--data">
                                         <li>Python</li>
-                                        <li>SQL</li>
+                                        <li>SQLite</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="#">レポートを見る</a>
-                                        <a href="#">コードを見る</a>
+                                        <a href="https://github.com/Nicol9632/poke">コードを見る</a>
                                     </div>
                                 </div>
                             </article>
