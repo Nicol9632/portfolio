@@ -778,4 +778,7 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 
   .contact-box { padding: 2.5rem 1.5rem; }
   .contact-title { font-size: 1.5rem; }
+
+  .player-band { padding-block: 3rem; }
+  .player { border-radius: 1rem; box-shadow: 6px 6px 0 var(--white); }
 }

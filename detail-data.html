@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>データ分析 詳細 | Portfolio</title>
+        <meta name="description" content="データ分析の作品の詳細ページ">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/detail.css">
+    </head>
+
+    <body class="detail">
+        <header class="site-header" id="top">
+            <div class="wrapper header-inner">
+                <a href="index.html" class="pill logo">Omochi</a>
+                <a class="pill pill--white" href="index.html#data">← 作品一覧へ</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ===== 見出しまわり ===== -->
+            <section class="wrapper detail-head">
+                <nav aria-label="パンくずリスト">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="index.html#data">データ分析</a></li>
+                        <li aria-current="page">DATA 01</li>
+                    </ol>
+                </nav>
+
+                <p class="eyebrow eyebrow--green">DATA 01</p>
+                <h1 class="detail-title">[プロジェクト名]</h1>
+                <p class="lead">[何を作ったかを1〜2行で。例：公開APIのデータを自動で集めて保存し、グラフで見られるようにした]</p>
+
+                <dl class="meta">
+                    <div>
+                        <dt>制作期間</dt>
+                        <dd>[期間]</dd>
+                    </div>
+                    <div>
+                        <dt>区分</dt>
+                        <dd>個人制作</dd>
+                    </div>
+                    <div>
+                        <dt>使用技術</dt>
+                        <dd>
+                            <ul class="tags tags--mix">
+                                <li>Python</li>
+                                <li>SQL</li>
+                                <li>[AWSなど]</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+
+                <ul class="hero-buttons">
+                    <li><a class="pill pill--pink pill--lg" href="#">GitHubを見る</a></li>
+                    <li><a class="pill pill--white pill--lg" href="#">デモを見る</a></li>
+                </ul>
+            </section>
+
+            <!-- ===== 全体の流れ ===== -->
+            <section class="flow-band" aria-labelledby="flow-title">
+                <div class="wrapper">
+                    <h2 class="band-title" id="flow-title">全体の流れ</h2>
+                    <p class="band-lead">データがどこから来て、どこに保存され、どう見られるか。</p>
+
+                    <ol class="flow">
+                        <li class="step">
+                            <p class="badge">STEP 1</p>
+                            <h3>取得</h3>
+                            <p class="step-text">[データ元・使うAPIなど]</p>
+                        </li>
+                        <li class="step">
+                            <p class="badge">STEP 2</p>
+                            <h3>加工</h3>
+                            <p class="step-text">[整えるルール・使うツール]</p>
+                        </li>
+                        <li class="step">
+                            <p class="badge">STEP 3</p>
+                            <h3>保存</h3>
+                            <p class="step-text">[保存先・テーブル名など]</p>
+                        </li>
+                        <li class="step">
+                            <p class="badge">STEP 4</p>
+                            <h3>可視化</h3>
+                            <p class="step-text">[グラフの種類・表示方法]</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ===== 本文 ===== -->
+            <div class="wrapper wrapper--narrow">
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">01</span>背景と目的
+                    </h2>
+                    <p>[なぜこのデータを扱おうと思ったか。何をできるようにしたかったか。]</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">02</span>設計のポイント
+                    </h2>
+                    <ul class="points">
+                        <li class="point">
+                            <h3>データの取り方</h3>
+                            <p>[どうやって、どのくらいの頻度で取得したか。]</p>
+                        </li>
+                        <li class="point">
+                            <h3>テーブルの設計</h3>
+                            <p>[どんな項目を持つテーブルにして、なぜそうしたか。]</p>
+                        </li>
+                        <li class="point">
+                            <h3>定期実行と失敗したときの対応</h3>
+                            <p>[自動で動かす仕組みと、止まったときにどうするか。]</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">03</span>できあがったもの
+                    </h2>
+                    <div class="figures">
+                        <figure>
+                            <div class="screen-frame screen-frame--wide screen-frame--green screen-frame--chart">
+                                <img src="img/data01-chart.png" alt="集計結果のグラフ" width="1280" height="800">
+                            </div>
+                            <figcaption>[画像の説明]</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="screen-frame screen-frame--wide screen-frame--lavender screen-frame--db">
+                                <img src="img/data01-db.png" alt="データベースの中身" width="1280" height="800">
+                            </div>
+                            <figcaption>[画像の説明]</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">04</span>苦労したことと工夫
+                    </h2>
+                    <p>[つまずいた点と、どう解決したか。]</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">05</span>学んだことと、次にやりたいこと
+                    </h2>
+                    <p>[この作品を通して身についたことと、改善したい点。]</p>
+                </section>
+            </div>
+
+            <!-- ===== 前後のページ ===== -->
+            <nav class="wrapper pager" aria-label="ページ移動">
+                <a class="pager-back" href="detail-web.html">
+                    <small>← 前の作品</small>
+                    <strong>ポートフォリオ</strong>
+                </a>
+                <a class="pager-next pager-next--movie" href="detail-movie.html">
+                    <small>次の作品 →</small>
+                    <strong>[作品名]</strong>
+                </a>
+            </nav>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrapper footer-inner">
+                <small>© Omochi</small>
+                <a href="index.html">作品一覧へ戻る</a>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

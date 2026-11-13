@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>動画 詳細 | Portfolio</title>
+        <meta name="description" content="動画制作の作品の詳細ページ">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/detail.css">
+    </head>
+
+    <body class="detail">
+        <header class="site-header" id="top">
+            <div class="wrapper header-inner">
+                <a href="index.html" class="pill logo">Omochi</a>
+                <a class="pill pill--white" href="index.html#movie">← 作品一覧へ</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ===== 見出しまわり ===== -->
+            <section class="wrapper detail-head">
+                <nav aria-label="パンくずリスト">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="index.html#movie">動画</a></li>
+                        <li aria-current="page">MOVIE 01</li>
+                    </ol>
+                </nav>
+
+                <div class="chip-row">
+                    <p class="eyebrow eyebrow--lavender">MOVIE 01</p>
+                    <p class="role-tag">編集</p>
+                </div>
+                <h1 class="detail-title">【Vlog】絶対に食べてほしい！さつまいもスイーツ【大阪】</h1>
+                <p class="lead">大阪のさつまいもスイーツを紹介するVlogです。撮影と編集を担当しました。[誰に向けて作ったか、一言]</p>
+
+                <dl class="meta">
+                    <div>
+                        <dt>担当</dt>
+                        <dd>撮影・編集</dd>
+                    </div>
+                    <div>
+                        <dt>使用ソフト</dt>
+                        <dd>Premiere</dd>
+                    </div>
+                    <div>
+                        <dt>制作期間</dt>
+                        <dd>[期間]</dd>
+                    </div>
+                    <div>
+                        <dt>動画の長さ</dt>
+                        <dd class="meta-time">[0:00]</dd>
+                    </div>
+                </dl>
+
+                <ul class="hero-buttons">
+                    <li><a class="pill pill--pink pill--lg" href="https://www.youtube.com/watch?v=9CtFzP4i19c">YouTubeで見る</a></li>
+                </ul>
+            </section>
+
+            <!-- ===== 動画プレーヤー ===== -->
+            <section class="player-band" aria-label="動画">
+                <div class="wrapper">
+                    <div class="player">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/9CtFzP4i19c"
+                            title="【Vlog】絶対に食べてほしい！さつまいもスイーツ【大阪】"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="encrypted-media; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== 本文 ===== -->
+            <div class="wrapper wrapper--narrow">
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">01</span>制作の意図
+                    </h2>
+                    <p>[どんな気持ちや情報を伝えたかったか。見る人にどう感じてほしかったか。]</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">02</span>編集のポイント
+                    </h2>
+                    <div class="figures">
+                        <figure>
+                            <div class="screen-frame screen-frame--video screen-frame--pink screen-frame--before">
+                                <img src="img/movie01-before.png" alt="編集前の画面" width="1280" height="720">
+                            </div>
+                            <figcaption class="ba-label">Before</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="screen-frame screen-frame--video screen-frame--green screen-frame--after">
+                                <img src="img/movie01-after.png" alt="編集後の画面" width="1280" height="720">
+                            </div>
+                            <figcaption class="ba-label">After</figcaption>
+                        </figure>
+                    </div>
+                    <p>[テンポ、字幕、音、色など、具体的に何を工夫したか。]</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">03</span>制作の流れ
+                    </h2>
+                    <ol class="make-flow">
+                        <li class="make-step make-step--yellow">
+                            <p class="step-no">STEP 1</p>
+                            <h3>企画・構成</h3>
+                            <p class="step-desc">[やったこと／かかった時間]</p>
+                        </li>
+                        <li class="make-step make-step--green">
+                            <p class="step-no">STEP 2</p>
+                            <h3>撮影・素材づくり</h3>
+                            <p class="step-desc">[やったこと／かかった時間]</p>
+                        </li>
+                        <li class="make-step make-step--lavender">
+                            <p class="step-no">STEP 3</p>
+                            <h3>編集</h3>
+                            <p class="step-desc">[やったこと／かかった時間]</p>
+                        </li>
+                        <li class="make-step make-step--pink">
+                            <p class="step-no">STEP 4</p>
+                            <h3>書き出し・公開</h3>
+                            <p class="step-desc">[やったこと／かかった時間]</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">04</span>工夫したことと学んだこと
+                    </h2>
+                    <p>[苦労した点、改善できた点、次に活かしたいこと。]</p>
+                </section>
+            </div>
+
+            <!-- ===== 前後のページ ===== -->
+            <nav class="wrapper pager" aria-label="ページ移動">
+                <a class="pager-back pager-back--data" href="detail-data.html">
+                    <small>← 前の作品</small>
+                    <strong>[作品名]</strong>
+                </a>
+                <a class="pager-next pager-next--list" href="index.html#movie">
+                    <small>一覧に戻る →</small>
+                    <strong>作品一覧</strong>
+                </a>
+            </nav>
+        </main>
+
+        <footer class="site-footer">

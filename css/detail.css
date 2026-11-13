@@ -1,0 +1,426 @@
+/* ===== 詳細ページ ===== */
+.wrapper--narrow { max-width: 50rem; }      /* 本文は、読みやすい幅に */
+.detail .site-footer { margin-top: 5.5rem; }
+
+/* 見出しまわり */
+.detail-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-block: 1.5rem 4.5rem;
+}
+.detail-head .lead { max-width: 42.5rem; }
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.detail-title {
+  margin: 0;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+/* 制作期間・区分・使用技術 */
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 3rem;
+  margin: 0;
+}
+.meta dt { color: var(--ink-soft); font-size: 0.8125rem; font-weight: 700; }
+.meta dd { margin: 0.125rem 0 0; font-weight: 900; }
+.meta .tags { margin-top: 0.25rem; }
+
+/* 全体のスクリーンショット（ブラウザ風の枠） */
+.shot-band {
+  padding-block: 4.5rem;
+  background: var(--pink-soft);
+  border-block: 3px solid var(--ink);
+}
+.browser {
+  margin: 0;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 10px 10px 0 var(--ink);
+  overflow: hidden;
+}
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0 1.125rem;
+  background: var(--yellow);
+  border-bottom: 3px solid var(--ink);
+}
+.browser-url {
+  flex: 1;
+  max-width: 26rem;
+  height: 1.625rem;
+  margin-left: 1rem;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+.browser-body {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 30rem;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.browser-body::before { content: "[サイト全体のスクリーンショット]"; }
+.browser-body img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* 本文のセクション */
+.detail-section { margin-top: 4rem; }
+.detail-section > p {
+  margin: 1.125rem 0 0;
+  font-weight: 500;
+  line-height: 1.95;
+}
+.section-title--sm { gap: 0.875rem; font-size: 1.75rem; line-height: 1.3; }
+.circle-number--sm { inline-size: 2.75rem; font-size: 1.0625rem; }
+
+/* こだわった点 */
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.point {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.point h3 { margin: 0; font-size: 1.125rem; font-weight: 900; }
+.point p  { margin: 0.5rem 0 0; color: var(--ink-soft); font-size: 0.9375rem; }
+
+/* 画面（PCとスマホ） */
+.screens {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.screens figure { margin: 0; min-width: 0; }
+.screen-pc { flex: 3 1 22.5rem; }
+.screen-sp { flex: 0 0 10rem; }
+
+.screen-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-align: center;
+  overflow: hidden;
+}
+.screen-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.screen-pc .screen-frame {
+  aspect-ratio: 16 / 10;
+  background: var(--pink-soft);
+  border-radius: 1rem;
+}
+.screen-pc .screen-frame::before { content: "[PC表示の画像]"; }
+.screen-sp .screen-frame {
+  width: 10rem;
+  height: 18.75rem;
+  background: var(--green);
+  border-width: 4px;
+  border-radius: 1.5rem;
+}
+.screen-sp .screen-frame::before { content: "[スマホ表示の画像]"; }
+.screens figcaption,
+.figures figcaption  {
+  margin-top: 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+/* 使った技術と理由 */
+.tech {
+  margin: 1.5rem 0 0;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 var(--ink);
+  overflow: hidden;
+}
+.tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 3px solid var(--ink);
+}
+.tech-row:last-child { border-bottom: 0; }
+.tech dt {
+  flex: 0 0 8.75rem;
+  font-size: 0.9375rem;
+  font-weight: 900;
+}
+.tech dd {
+  flex: 1 1 16rem;
+  min-width: 0;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+/* 前後のページ */
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 6.5rem;
+}
+.pager a {
+  flex: 1 1 18.75rem;
+  min-width: 0;
+  padding: 1.25rem 1.5rem;
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.pager a:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.pager small  { display: block; font-size: 0.8125rem; font-weight: 700; }
+.pager strong { display: block; margin-top: 0.25rem; font-size: 1.125rem; font-weight: 900; }
+.pager-back { background: var(--yellow); }
+.pager-next { background: var(--green); text-align: right; }
+
+/* ===== Data詳細ページ用 ===== */
+
+/* 本文の丸い番号は、全部、黄色 */
+.detail .circle-number { color: var(--yellow); }
+
+/* 見出しのチップ（緑） */
+.eyebrow--green { background: var(--green); }
+
+/* 使用技術のタグを、3色に */
+.tags--mix li:nth-child(1) { background: var(--yellow); }
+.tags--mix li:nth-child(2) { background: var(--green); }
+.tags--mix li:nth-child(3) { background: var(--lavender); }
+
+/* 全体の流れ（緑の帯） */
+.flow-band {
+  padding-block: 5rem;
+  background: var(--green);
+  border-block: 3px solid var(--ink);
+}
+.band-title {
+  margin: 0;
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-size: 2.125rem;
+  line-height: 1.3;
+}
+.band-lead { margin: 0.625rem 0 0; font-weight: 500; }
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;               /* 横のすき間に、矢印が入る */
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.step {
+  position: relative;           /* 矢印を、この枠の外に置く基準 */
+  flex: 1 1 12.5rem;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.step h3 { margin: 0; font-size: 1.25rem; font-weight: 900; }
+.step-text { margin: 0; color: var(--ink-soft); font-size: 0.875rem; }
+
+/* 最後以外の枠の、右側に矢印 */
+.step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -2.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+}
+
+/* 画像が2枚 */
+.figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.figures figure { flex: 1 1 18.75rem; min-width: 0; margin: 0; }
+
+.screen-frame--wide { aspect-ratio: 16 / 10; border-radius: 1rem; }
+.screen-frame--green    { background: var(--green); }
+.screen-frame--lavender { background: var(--lavender); }
+.screen-frame--chart::before { content: "[グラフ・ダッシュボードの画像]"; }
+.screen-frame--db::before    { content: "[データベースの中身・実行ログの画像]"; }
+
+/* 次の作品の色（動画は紫） */
+.pager-next--movie { background: var(--lavender); }
+
+/* 幅が狭いと、流れを縦に並べる */
+@media (max-width: 64rem) {
+  .flow { flex-direction: column; gap: 3rem; }
+  .step { flex: none; }
+  .step:not(:last-child)::after {
+    content: "↓";
+    top: auto;
+    right: auto;
+    bottom: -2.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== 動画詳細ページ用 ===== */
+
+/* 見出しのチップ（紫）と、役割のタグ（緑） */
+.eyebrow--lavender { background: var(--lavender); }
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem;
+}
+.role-tag {
+  margin: 0;
+  padding: 0 1rem;
+  background: var(--green);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 900;
+}
+
+/* 動画の長さは、数字用のフォント */
+.meta-time { font-family: "Rubik", sans-serif; }
+
+/* 動画プレーヤー（紫の帯） */
+.player-band {
+  padding-block: 4.5rem;
+  background: var(--lavender);
+  border-block: 3px solid var(--ink);
+}
+.player {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 1.5rem;
+  box-shadow: 10px 10px 0 var(--white);
+  overflow: hidden;
+}
+.player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Before / After の画像 */
+.screen-frame--video { aspect-ratio: 16 / 9; border-radius: 1rem; }
+.screen-frame--pink { background: var(--pink-soft); }
+.screen-frame--before::before { content: "[編集前の画像]"; }
+.screen-frame--after::before  { content: "[編集後の画像]"; }
+.figures .ba-label {
+  color: var(--ink);
+  font-family: "Rubik", sans-serif;
+  font-size: 0.875rem;
+}
+.figures + p { margin-top: 1.5rem; }      /* 画像の下の文章との間隔 */
+
+/* 制作の流れ（4色のカード） */
+.make-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.make-step {
+  flex: 1 1 10rem;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 3px solid var(--ink);
+  border-radius: 1.25rem;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.make-step .step-no {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.make-step h3 { margin: 0.25rem 0 0; font-size: 1.0625rem; font-weight: 900; }
+.make-step .step-desc { margin: 0.25rem 0 0; font-size: 0.875rem; font-weight: 500; }
+.make-step--yellow   { background: var(--yellow); }
+.make-step--green    { background: var(--green); }
+.make-step--lavender { background: var(--lavender); }
+.make-step--pink     { background: var(--pink-soft); }
+
+/* 前後の作品の色 */
+.pager-back--data { background: var(--green); }
+.pager-next--list { background: var(--yellow); }
