@@ -424,3 +424,11 @@
 /* 前後の作品の色 */
 .pager-back--data { background: var(--green); }
 .pager-next--list { background: var(--yellow); }
+
+.learned {
+  margin: 1.125rem 0 0;
+  padding-left: 1.5rem;
+  font-weight: 500;
+  line-height: 1.95;
+}
+.learned li + li { margin-top: 0.5rem; }
