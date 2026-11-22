@@ -771,6 +771,47 @@ a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
   text-underline-offset: 4px;
 }
 
+.cards > li[hidden] { display: none; }
+
+/* Data：2列で表示（スマホは1列） */
+.cards--data {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem 1.75rem;
+}
+@media (min-width: 48rem) {
+    .cards--data {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ページ切り替えのボタン */
+.card-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.card-pager[hidden] { display: none; }
+.card-pager-count {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: 700;
+}
+.card-pager .pill {
+    font-family: inherit;
+    cursor: pointer;
+}
+.card-pager .pill:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.card-pager .pill:disabled:hover {
+    transform: none;
+    box-shadow: 4px 4px 0 var(--ink);
+}
+
 /* ===== 狭い画面 ===== */
 @media (max-width: 640px) {
   .header-inner { justify-content: center; padding-block: 1rem; }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTubeの分析アプリを作る | Portfolio</title>
+        <meta name="description" content="YouTubeのCSVを読み込んで、視聴回数や登録者の増減を見られるアプリの詳細ページ">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/detail.css">
+    </head>
+
+    <body class="detail">
+        <header class="site-header" id="top">
+            <div class="wrapper header-inner">
+                <a href="index.html" class="pill logo">Omochi</a>
+                <a class="pill pill--white" href="index.html#data">← 作品一覧へ</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- ===== 見出しまわり ===== -->
+            <section class="wrapper detail-head">
+                <nav aria-label="パンくずリスト">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Portfolio</a></li>
+                        <li><a href="index.html#data">データ分析</a></li>
+                        <li aria-current="page">DATA 03</li>
+                    </ol>
+                </nav>
+
+                <p class="eyebrow eyebrow--green">DATA 03</p>
+                <h1 class="detail-title">YouTubeの分析アプリを作る</h1>
+                <p class="lead">YouTube Studio から書き出した CSV を読み込み、視聴回数や登録者の増減を見られるアプリを作りました。</p>
+                <dl class="meta">
+                    <div><dt>制作期間</dt><dd>3日</dd></div>
+                    <div><dt>区分</dt><dd>個人制作（AI の支援あり）</dd></div>
+                    <div>
+                        <dt>使用技術</dt>
+                        <dd>
+                            <ul class="tags tags--mix">
+                                <li>Python</li>
+                                <li>Streamlit</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+                <ul class="hero-buttons">
+                    <li><a class="pill pill--pink pill--lg" href="https://omochi-analytics.streamlit.app/analysis">アプリを見る</a></li>
+                    <li><a class="pill pill--white pill--lg" href="https://github.com/Nicol9632/omochi-analytics">コードを見る</a></li>
+                </ul>
+            </section>
+
+            <!-- ===== 全体の流れ ===== -->
+            <section class="flow-band" aria-labelledby="flow-title">
+                <div class="wrapper">
+                    <h2 class="band-title" id="flow-title">全体の流れ</h2>
+                    <p class="band-lead">データがどこから来て、どこに保存され、どう見られるか。</p>
+
+                    <ol class="flow">
+                        <li class="step"><p class="badge">STEP 1</p><h3>取得</h3><p class="step-text">YouTube Studio から、CSV を書き出す</p></li>
+                        <li class="step"><p class="badge">STEP 2</p><h3>読み込み・集計</h3><p class="step-text">Python で CSV を読み込み、期間ごとに集計する</p></li>
+                        <li class="step"><p class="badge">STEP 3</p><h3>表示</h3><p class="step-text">Streamlit で、グラフと表を画面に出す</p></li>
+                        <li class="step"><p class="badge">STEP 4</p><h3>公開</h3><p class="step-text">Streamlit Community Cloudに公開</p></li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ===== 本文 ===== -->
+            <div class="wrapper wrapper--narrow">
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">01</span>背景と目的
+                    </h2>
+                    <p>自分の YouTube チャンネルの動きを、数字だけでなく、画面で見て確かめたいと思い、作りました。</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">02</span>設計のポイント
+                    </h2>
+                    <ul class="points">
+                        <li class="point">
+                            <h3>データの取り方</h3>
+                            <p>YouTube Studio から、CSV を書き出して使いました（2026/11/21 時点のデータ）。API ではなく、CSV を使ったので、データは自動では更新されません。</p>
+                        </li>
+                        <li class="point">
+                            <h3>データを読み込む部分と、表示する部分を分ける</h3>
+                            <p>CSV を読み込んで整える部分と、画面に出す部分を、分けて書いています。見せ方を変えても、データの処理に影響しないようにするためです。</p>
+                        </li>
+                        <li class="point">
+                            <h3>AI との分担</h3>
+                            <p>コードの大半は、AI に書いてもらいました。自分は、どんなアプリにしたいかを決めることと、うまく動かない所を見つけて伝えることを担当しました。</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">03</span>できあがったもの
+                    </h2>
+                    <div class="figures">
+                        <figure>
+                            <div class="screen-frame screen-frame--wide screen-frame--green screen-frame--chart">
+                                <img src="img/data03-app.png" alt="視聴回数、コンテンツの種類、流入元、よく見られている動画を表示したアプリの概要画面" width="1920" height="1408">
+                            </div>
+                            <figcaption>アプリの概要画面</figcaption>
+                        </figure>
+                    </div>
+                    <p>期間（7日・28日・90日・全期間）を切り替えて、視聴回数、1日平均、公開した本数、登録者の増加を見られます。</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">04</span>苦労したことと工夫
+                    </h2>
+                    <p>ソースコードや、回帰の理解が、大変でした。Python の基本は分かり、書いてあることは何となく理解できますが、0 から自分で書くことは、まだできませんでした。まだまだ勉強不足だと感じています。</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2 class="section-title section-title--sm">
+                        <span class="circle-number circle-number--sm" aria-hidden="true">05</span>学んだことと、次にやりたいこと
+                    </h2>
+                    <p>データを読み込む部分と、表示する部分を分けたほうがよいことを学びました。次は、小さな機能を、AI に頼らず自分で 0 から書いて追加してみたいです。</p>
+                </section>
+            </div>
+
+            <!-- ===== 前後のページ ===== -->
+            <nav class="wrapper pager" aria-label="ページ移動">
+                <a class="pager-back pager-back--data" href="detail-data02.html">
+                    <small>← 前の作品</small>
+                    <strong>PokéAPIからタイプごとの種族値の合計の平均を比較する</strong>
+                </a>
+                <a class="pager-next pager-next--movie" href="detail-movie01.html">
+                    <small>次の作品 →</small>
+                    <strong>【Vlog】絶対に食べてほしい！さつまいもスイーツ【大阪】</strong>
+                </a>
+            </nav>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrapper footer-inner">
+                <small>© Omochi</small>
+                <a href="index.html">作品一覧へ戻る</a>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -159,19 +159,48 @@
                     </div>
                     
                     <ul class="chips">
-                        <li><button type="button" class="chip chip--on">すべて</button></li>
-                        <li><button type="button" class="chip">Python</button></li>
+                        <li><button type="button" class="chip chip--on" data-filter="all" aria-pressed="true">すべて</button></li>
+                        <li><button type="button" class="chip" data-filter="Python" aria-pressed="false">Python</button></li>
+                        <li><button type="button" class="chip" data-filter="SQLite" aria-pressed="false">SQLite</button></li>
+                        <li><button type="button" class="chip" data-filter="Streamlit" aria-pressed="false">Streamlit</button></li>
                     </ul>
 
-                    <ul class="cards cards--data">
-                        <li>
+                    <ul class="cards cards--data" data-per-page="2">
+                        <li data-tags="Python,SQLite">
                             <article class="card">
                                 <div class="thumb thumb--data">
-                                    <img src="img/data01-chart.png" alt="世代ごとの平均合計種族値の折れ線グラフ">
+                                    <img src="img/data02-chart.png" alt="タイプごとの平均合計種族値のグラフ">
                                 </div>
                                 <div class="card-body">
                                     <p class="badge badge--data">DATA 01</p>
                                     <h3><a href="detail-data01.html">PokéAPIから世代ごとの種族値の合計の平均を比較する</a></h3>
+                                    <dl class="data-detail">
+                                        <dt>目的</dt>
+                                        <dd>世代ごとの比較のあと、タイプによって強さに差があるのかを調べる</dd>
+                                        <dt>手法</dt>
+                                        <dd>PokéAPI の JSON を保存 → Python で整形 → SQLite に登録 → タイプごとに集計</dd>
+                                        <dt>結果</dt>
+                                        <dd>タイプごとの平均に差があった。平均が低いタイプには、進化前のポケモンが影響している可能性がある</dd>
+                                    </dl>
+                                    <ul class="tags tags--data">
+                                        <li>Python</li>
+                                        <li>SQLite</li>
+                                    </ul>
+                                    <div class="card-links">
+                                        <a href="detail-data01.html">詳細を見る</a>
+                                        <a href="https://github.com/Nicol9632/poke">コードを見る</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        <li data-tags="Python,SQLite">
+                            <article class="card">
+                                <div class="thumb thumb--data">
+                                    <img src="img/data03-chart.png" alt="世代ごとの平均合計種族値の折れ線グラフ">
+                                </div>
+                                <div class="card-body">
+                                    <p class="badge badge--data">DATA 02</p>
+                                    <h3><a href="detail-data02.html">PokéAPIからタイプごとの種族値の合計の平均を比較する</a></h3>
                                     <dl class="data-detail">
                                         <dt>目的</dt>
                                         <dd>APIからデータを取得し、保存して、可視化するまでの流れを経験する</dd>
@@ -190,28 +219,30 @@
                                 </div>
                             </article>
                         </li>
-                        <li>
+                        <li data-tags="Python,Streamlit"> 
                             <article class="card">
                                 <div class="thumb thumb--data">
-                                    <img src="img/data03-chart.png" alt="世代ごとの平均合計種族値の折れ線グラフ">
+                                    <img src="img/data03-app.png" alt="YouTubeチャンネルの視聴回数や視聴者の流入元を見られるアプリの概要画面" width="1920" height="1408" loading="lazy">
                                 </div>
                                 <div class="card-body">
-                                    <p class="badge badge--data">DATA 01</p>
-                                    <h3><a href="detail-data02.html">PokéAPIからタイプごとの種族値の合計の平均を比較する</a></h3>
+                                    <p class="badge badge--data">DATA 03</p>
+                                    <h3><a href="detail-data03.html">YouTubeの分析アプリを作る</a></h3>
                                     <dl class="data-detail">
                                         <dt>目的</dt>
-                                        <dd>APIからデータを取得し、保存して、可視化するまでの流れを経験する</dd>
+                                        <dd>自分のチャンネルの動きを、画面で見られるようにする</dd>
                                         <dt>手法</dt>
-                                        <dd>PokéAPI の JSON を保存 → Python で整形 → SQLite に登録 → 世代ごとに平均を集計</dd>
+                                        <dd>YouTube Studio の CSV を Python で読み込み、Streamlit で表示</dd>
                                         <dt>結果</dt>
-                                        <dd>最大値・最小値の変動は小さい一方、平均は世代が進むにつれて右肩上がりになった</dd>
+                                        <dd>視聴回数、登録者の増減、流入元、よく見られている動画を、1つの画面で見られるようにした</dd>
                                     </dl>
                                     <ul class="tags tags--data">
                                         <li>Python</li>
-                                        <li>SQLite</li>
+                                        <li>Streamlit</li>
                                     </ul>
                                     <div class="card-links">
-                                        <a href="https://github.com/Nicol9632/poke">コードを見る</a>
+                                        <a href="detail-data03.html">詳細を見る</a>
+                                        <a href="[アプリのURL]">アプリを見る</a>
+                                        <a href="[GitHubのURL]">コードを見る</a>
                                     </div>
                                 </div>
                             </article>
